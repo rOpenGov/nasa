@@ -46,26 +46,28 @@ Currently, install from local files or GitHub (future release):
 ### Example usage
 
 #### Load the library
-library(nasa)
+`library(nasa)`
 
 #### Get Astronomy Picture of the Day metadata
+```
 apod_data <- get_apod_metadata(
   start_date = "2024-04-01",
   end_date = "2024-04-02",
-  api_key = "DEMO_KEY"
-)
+  api_key = "DEMO_KEY")
+```
 
 #### Retrieve Mars Rover Photos metadata
+```
 mars_data <- get_mars_rover_photos_and_metadata(
   rover = "curiosity",
   earth_date = "2020-02-01",
-  api_key = "DEMO_KEY"
-)
+  api_key = "DEMO_KEY")
+```
 
-#### Search Earthdata for "sea surface temperature"
+#### Search Earthdata for "sea surface temperature" (or any keyword or phrase)
+```
 earthdata_results <- get_earthdata(
   keyword = "sea surface temperature",
-  n_results = 10
-)
-
+  n_results = 10)
+```
 
