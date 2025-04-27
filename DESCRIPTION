@@ -1,0 +1,22 @@
+Package: nasa
+Type: Package
+Title: Access National Aeronautics and Space Administration (NASA) Open APIs for Space and Earth Data
+Version: 1.0.0
+Author: Steph Buongiorno
+Maintainer: Steph Buongiorno <steph.buon@proton.me>
+Description: Provides functions to access and download data from various NASA APIs
+    including the Astronomy Picture of the Day <https://api.nasa.gov/planetary/apod>,
+    Mars Rover Photos <https://api.nasa.gov/mars-photos/api/v1/rovers>,
+    Earth Polychromatic Imaging Camera (EPIC) <https://api.nasa.gov/EPIC/api/natural>,
+    Near Earth Object Web Service (NeoWs) <https://api.nasa.gov/neo/rest/v1/neo/browse>,
+    Earth Observatory Natural Event Tracker (EONET) <https://eonet.gsfc.nasa.gov/api/v3/events>,
+    and NASA Earthdata CMR Search <https://cmr.earthdata.nasa.gov/search/collections.json>.
+    Data is retrieved, cleaned for analysis, and returned in a dataframe-friendly format.
+License: GPL-3
+Encoding: UTF-8
+Imports:
+    httr,
+    jsonlite,
+    magick,
+    dplyr
+RoxygenNote: 7.3.2
