@@ -18,7 +18,7 @@ All retrieved data is returned in cleaned, tidy data frames suitable for analysi
 
 ### API Use
 
-Most functions in this package can be run using the default `DEMO_KEY`. However, because the DEMO_KEY is publicly shared and subject to rate limits, it is strongly recommended to request your own API key from NASA. You can quickly obtain a personal key by visiting [https://api.nasa.gov/](https://api.nasa.gov/).
+Most functions in this package can be run using the default `DEMO_KEY`. However, because the `DEMO_KEY` is publicly shared and subject to rate limits, it is recommended to request your own API key from NASA by visiting [https://api.nasa.gov/](https://api.nasa.gov/).
 
 ### Installation
 
