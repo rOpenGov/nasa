@@ -11,6 +11,7 @@ name: rogtemplate-gh-pages
 jobs:
   rogtemplate-gh-pages:
     runs-on: ubuntu-latest
+    permissions: write-all
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
