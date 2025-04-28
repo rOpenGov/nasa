@@ -1,5 +1,9 @@
 # nasa
 
+[![](https://cranlogs.r-pkg.org/badges/nasa)](https://cran.r-project.org/package=nasa)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/nasa)](https://cran.r-project.org/package=nasa)
+[![](https://www.r-pkg.org/badges/version/nasa)](https://CRAN.R-project.org/package=nasa)
+
 Access National Aeronautics and Space Administration (NASA) Open APIs for Space and Earth Data.
 
 The nasa package provides functions to access and download data from various NASA APIs, including:
