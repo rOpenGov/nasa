@@ -53,11 +53,16 @@ Optionally saves the images to a folder on the user's Desktop.</p>
 
 
 <dl><dt id="arg-rover">rover<a class="anchor" aria-label="anchor" href="#arg-rover"></a></dt>
-<dd><p>Character. The name of the Mars rover. Must be one of: <code>"curiosity"</code>, <code>"opportunity"</code>, <code>"spirit"</code>, or <code>"perseverance"</code>. Default is <code>"curiosity"</code>.</p></dd>
+<dd><p>Character. The name of the Mars rover.
+Must be one of the following:</p><ul><li><p><code>"curiosity"</code></p></li>
+<li><p><code>"opportunity"</code></p></li>
+<li><p><code>"spirit"</code></p></li>
+<li><p><code>"perseverance"</code></p></li>
+</ul></dd>
 
 
 <dt id="arg-earth-date">earth_date<a class="anchor" aria-label="anchor" href="#arg-earth-date"></a></dt>
-<dd><p>Character. The Earth date to query in "YYYY-MM-DD" format. Default is <code>"2024-04-01"</code>.</p></dd>
+<dd><p>Character. The Earth date to query in <code>"YYYY-MM-DD"</code> format. Default is <code>"2024-04-01"</code>.</p></dd>
 
 
 <dt id="arg-api-key">api_key<a class="anchor" aria-label="anchor" href="#arg-api-key"></a></dt>
@@ -65,12 +70,14 @@ Optionally saves the images to a folder on the user's Desktop.</p>
 
 
 <dt id="arg-folder-name">folder_name<a class="anchor" aria-label="anchor" href="#arg-folder-name"></a></dt>
-<dd><p>Character or NULL. If provided, images will be saved in a folder with this name on the user's Desktop. If NULL, images are only displayed and not saved.</p></dd>
+<dd><p>Character or NULL. If provided, images will be saved in a folder with this name on the user's Desktop.
+If NULL, images are only displayed and not saved.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame containing metadata about the retrieved photos, including photo ID, sol (Martian day), camera name, image source URL, Earth date, and rover name.</p>
+    <p>A data frame containing metadata about the retrieved photos, including photo ID, sol (Martian day),
+camera name, image source URL, Earth date, and rover name.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>

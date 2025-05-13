@@ -74,32 +74,38 @@ with only cleaned column names (columns with '.' or '$' removed).</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>CMR is Earthdata’s search engine — the backend database that stores metadata about:</p><ul><li><p>Satellite datasets</p></li>
-<li><p>Earth science data (climate, ocean, atmosphere, land)</p></li>
-<li><p>Observational granules (single files like images, temperature readings, etc.)</p></li>
-<li><p>Services (subsetting, reformatting, and other data services)</p></li>
-</ul><p>The search finds matches based on the keyword provided. The keyword can appear in:</p><ul><li><p>Dataset titles</p></li>
-<li><p>Dataset descriptions</p></li>
-<li><p>Dataset keywords (tags)</p></li>
-<li><p>Some provider names</p></li>
-</ul><p>The function accesses the CMR API endpoint
-<a href="https://cmr.earthdata.nasa.gov/search/collections.json" class="external-link">https://cmr.earthdata.nasa.gov/search/collections.json</a>.
+    <p>CMR is the Earthdata search engine, the backend database that stores metadata about:</p>
+<p>- Satellite datasets
+- Earth science data (climate, ocean, atmosphere, land)
+- Observational granules (single files like images, temperature readings, etc.)
+- Services (subsetting, reformatting, and other data services)</p>
+<p>The search finds matches based on the keyword provided. The keyword can appear in:</p>
+<p>- Dataset titles
+- Dataset descriptions
+- Dataset keywords (tags)
+- Some provider names</p>
+<p>The function accesses the CMR API endpoint:
+<code>https://cmr.earthdata.nasa.gov/</code>
+<code>search/collections.json</code>
+(Note: This is an API endpoint and may return an error when opened in a browser.)
 It harmonizes columns across API pages and returns up to the number of requested results.
 If no results are found, an empty data frame is returned.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Search for 10 datasets related to sea surface temperature</span></span></span>
-<span class="r-in"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">get_earthdata</span><span class="op">(</span>keyword <span class="op">=</span> <span class="st">"sea surface temperature"</span>, n_results <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span><span class="co"># Search for 1 dataset related to sea surface temperature</span></span></span>
+<span class="r-in"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">get_earthdata</span><span class="op">(</span>keyword <span class="op">=</span> <span class="st">"sea surface temperature"</span>, n_results <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Search with a temporal constraint</span></span></span>
 <span class="r-in"><span><span class="va">results_time</span> <span class="op">&lt;-</span> <span class="fu">get_earthdata</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  keyword <span class="op">=</span> <span class="st">"sea surface temperature"</span>,</span></span>
-<span class="r-in"><span>  n_results <span class="op">=</span> <span class="fl">10</span>,</span></span>
+<span class="r-in"><span>  n_results <span class="op">=</span> <span class="fl">1</span>,</span></span>
 <span class="r-in"><span>  start_date <span class="op">=</span> <span class="st">"2020-01-01"</span>,</span></span>
 <span class="r-in"><span>  end_date <span class="op">=</span> <span class="st">"2020-01-02"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
