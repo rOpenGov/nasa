@@ -28,7 +28,7 @@ Queries NASA's Astronomy Picture of the Day (APOD) API to retrieve images and me
 between a specified start and end date. Only image media types are included.
 }
 \details{
-The function filters out any media types that are not images (e.g., videos).
+The function filters out any media types that are not images—for example, videos.
 It prints the image along with a truncated explanation for each entry,
 then returns the full metadata as a data frame.
 }

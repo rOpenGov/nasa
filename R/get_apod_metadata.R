@@ -1,6 +1,6 @@
 # Declare global variables to satisfy R CMD check
 utils::globalVariables(c("media_type", "title", "explanation"))
-
+#'
 #' Retrieve Astronomy Picture of the Day (APOD) images and metadata
 #'
 #' Queries NASA's Astronomy Picture of the Day (APOD) API to retrieve images and metadata
@@ -13,7 +13,8 @@ utils::globalVariables(c("media_type", "title", "explanation"))
 #'
 #' @return A data frame containing metadata about the APOD images (date, title, explanation, URL, and media type).
 #'
-#' @details The function filters out any media types that are not images (e.g., videos).
+#' @details
+#' The function filters out any media types that are not images—for example, videos.
 #' It prints the image along with a truncated explanation for each entry,
 #' then returns the full metadata as a data frame.
 #'

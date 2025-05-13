@@ -28,38 +28,39 @@ Queries NASA's Common Metadata Repository (CMR) to search Earth science datasets
 related to a specified keyword. Optionally filters results by a temporal range.
 }
 \details{
-CMR is Earthdata’s search engine — the backend database that stores metadata about:
-\itemize{
-  \item Satellite datasets
-  \item Earth science data (climate, ocean, atmosphere, land)
-  \item Observational granules (single files like images, temperature readings, etc.)
-  \item Services (subsetting, reformatting, and other data services)
-}
+CMR is the Earthdata search engine, the backend database that stores metadata about:
+
+- Satellite datasets
+- Earth science data (climate, ocean, atmosphere, land)
+- Observational granules (single files like images, temperature readings, etc.)
+- Services (subsetting, reformatting, and other data services)
 
 The search finds matches based on the keyword provided. The keyword can appear in:
-\itemize{
-  \item Dataset titles
-  \item Dataset descriptions
-  \item Dataset keywords (tags)
-  \item Some provider names
-}
 
+- Dataset titles
+- Dataset descriptions
+- Dataset keywords (tags)
+- Some provider names
 
-The function accesses the CMR API endpoint
-\url{https://cmr.earthdata.nasa.gov/search/collections.json}.
+The function accesses the CMR API endpoint:
+\code{https://cmr.earthdata.nasa.gov/}
+\code{search/collections.json}
+(Note: This is an API endpoint and may return an error when opened in a browser.)
 It harmonizes columns across API pages and returns up to the number of requested results.
 If no results are found, an empty data frame is returned.
 }
 \examples{
-# Search for 10 datasets related to sea surface temperature
-results <- get_earthdata(keyword = "sea surface temperature", n_results = 10)
+\dontrun{
+# Search for 1 dataset related to sea surface temperature
+results <- get_earthdata(keyword = "sea surface temperature", n_results = 1)
 
 # Search with a temporal constraint
 results_time <- get_earthdata(
   keyword = "sea surface temperature",
-  n_results = 10,
+  n_results = 1,
   start_date = "2020-01-01",
   end_date = "2020-01-02"
 )
+}
 
 }
