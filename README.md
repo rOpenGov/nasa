@@ -16,19 +16,29 @@ The nasa package provides functions to access and download data from various NAS
 
 All retrieved data is returned in cleaned, tidy data frames suitable for analysis or visualization.
 
+### Install 
+
+Install from CRAN:
+```
+install.packages("noaa")
+```
+
+Install from the [rOpenGov universe](https://ropengov.r-universe.dev/ui#builds):
+```
+# Enable repository from ropengov
+options(repos = c(
+  ropengov = 'https://ropengov.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'))
+  
+# Download and install noaa
+install.packages("noaa")
+```
+
 ### API Use
 
 Most functions in this package can be run using the default `DEMO_KEY`. However, because the `DEMO_KEY` is publicly shared and subject to rate limits, it is recommended to request your own API key from NASA by visiting [https://api.nasa.gov/](https://api.nasa.gov/).
 
 ### Installation
-
-Currently, install from local files or GitHub (future release):
-
-### Install devtools if needed
-`install.packages("devtools")`
-
-### Install from GitHub (after uploading)
-`devtools::install_github("yourusername/nasa")`
 
 ### Functions
 
