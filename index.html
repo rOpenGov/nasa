@@ -69,6 +69,20 @@
 <p>The nasa package provides functions to access and download data from various NASA APIs, including: - Astronomy Picture of the Day (APOD): <a href="https://api.nasa.gov/planetary/apod" class="external-link uri">https://api.nasa.gov/planetary/apod</a> - Mars Rover Photos: <a href="https://api.nasa.gov/mars-photos/api/v1/rovers" class="external-link uri">https://api.nasa.gov/mars-photos/api/v1/rovers</a> - Earth Polychromatic Imaging Camera (EPIC): <a href="https://api.nasa.gov/EPIC/api/natural" class="external-link uri">https://api.nasa.gov/EPIC/api/natural</a> - Near Earth Object Web Service (NeoWs): <a href="https://api.nasa.gov/neo/rest/v1/neo/browse" class="external-link uri">https://api.nasa.gov/neo/rest/v1/neo/browse</a> - Earth Observatory Natural Event Tracker (EONET): <a href="https://eonet.gsfc.nasa.gov/api/v3/events" class="external-link uri">https://eonet.gsfc.nasa.gov/api/v3/events</a> - NASA Earthdata Common Metadata Repository (CMR): <a href="https://cmr.earthdata.nasa.gov/search/collections.json" class="external-link uri">https://cmr.earthdata.nasa.gov/search/collections.json</a></p>
 <p>All retrieved data is returned in cleaned, tidy data frames suitable for analysis or visualization.</p>
 <div class="section level3">
+<h3 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
+</h3>
+<p>Install from CRAN:</p>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"noaa"</span><span class="op">)</span></span></code></pre>
+<p>Install from the <a href="https://ropengov.r-universe.dev/ui#builds" class="external-link">rOpenGov universe</a>:</p>
+<pre><code><span><span class="co"># Enable repository from ropengov</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  ropengov <span class="op">=</span> <span class="st">'https://ropengov.r-universe.dev'</span>,</span>
+<span>  CRAN <span class="op">=</span> <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Download and install noaa</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"noaa"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="section level3">
 <h3 id="api-use">API Use<a class="anchor" aria-label="anchor" href="#api-use"></a>
 </h3>
 <p>Most functions in this package can be run using the default <code>DEMO_KEY</code>. However, because the <code>DEMO_KEY</code> is publicly shared and subject to rate limits, it is recommended to request your own API key from NASA by visiting <a href="https://api.nasa.gov/" class="external-link">https://api.nasa.gov/</a>.</p>
@@ -76,17 +90,6 @@
 <div class="section level3">
 <h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h3>
-<p>Currently, install from local files or GitHub (future release):</p>
-</div>
-<div class="section level3">
-<h3 id="install-devtools-if-needed">Install devtools if needed<a class="anchor" aria-label="anchor" href="#install-devtools-if-needed"></a>
-</h3>
-<p><code>install.packages("devtools")</code></p>
-</div>
-<div class="section level3">
-<h3 id="install-from-github-after-uploading">Install from GitHub (after uploading)<a class="anchor" aria-label="anchor" href="#install-from-github-after-uploading"></a>
-</h3>
-<p><code>devtools::install_github("yourusername/nasa")</code></p>
 </div>
 <div class="section level3">
 <h3 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
