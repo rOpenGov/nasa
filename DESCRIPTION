@@ -1,6 +1,6 @@
 Package: nasa
 Type: Package
-Title: Access National Aeronautics and Space Administration (NASA) Open APIs for Space and Earth Data
+Title: Access National Aeronautics and Space Administration (NASA) APIs
 Version: 1.0.0
 Authors@R: person("Steph", "Buongiorno",
                   email = "steph.buon@proton.me",
