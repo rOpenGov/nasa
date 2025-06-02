@@ -1,0 +1,25 @@
+Package: nasa
+Type: Package
+Title: Access National Aeronautics and Space Administration (NASA) APIs
+Version: 1.0.0
+Authors@R: person("Steph", "Buongiorno",
+                  email = "steph.buon@proton.me",
+                  role = c("aut", "cre"))
+Author: Steph Buongiorno [aut, cre]
+Maintainer: Steph Buongiorno <steph.buon@proton.me>
+Description: Provides functions to access and download data from various NASA APIs <https://api.nasa.gov/#browseAPI>, including:
+    Astronomy Picture of the Day (APOD), Mars Rover Photos, Earth Polychromatic Imaging Camera (EPIC),
+    Near Earth Object Web Service (NeoWs), Earth Observatory Natural Event Tracker (EONET), 
+    and NASA Earthdata CMR Search. Most endpoints require a NASA API key for access.
+    Data is retrieved, cleaned for analysis, and returned in a dataframe-friendly format.
+License: GPL-3
+Encoding: UTF-8
+Imports:
+    httr,
+    jsonlite,
+    magick,
+    dplyr
+RoxygenNote: 7.3.2
+URL: https://api.nasa.gov, https://eonet.gsfc.nasa.gov, https://cmr.earthdata.nasa.gov:443/search
+
+
